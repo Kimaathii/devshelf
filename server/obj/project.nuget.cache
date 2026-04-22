@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v/UOeSKRmT4=",
+  "dgSpecHash": "KANSHL9rF8c=",
   "success": true,
   "projectFilePath": "C:\\Users\\kimathi\\Desktop\\devshelf\\server\\server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kimathi\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\kimathi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
     "C:\\Users\\kimathi\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.6\\microsoft.data.sqlite.core.10.0.6.nupkg.sha512",
     "C:\\Users\\kimathi\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.6\\microsoft.entityframeworkcore.10.0.6.nupkg.sha512",

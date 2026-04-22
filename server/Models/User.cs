@@ -6,5 +6,10 @@ public class User
     public required string Email { get; set; }
     public string PasswordHash {  get; private set; } = string.Empty;
 
+    public void SetPasswordHash(string hash)
+    {
+        PasswordHash = hash;
+    }
+
     public DateTime CreatedAt { get; set; }
 }
