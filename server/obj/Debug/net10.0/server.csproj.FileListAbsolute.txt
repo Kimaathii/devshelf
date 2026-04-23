@@ -65,3 +65,8 @@ C:\Users\kimathi\Desktop\devshelf\server\obj\Debug\net10.0\server.pdb
 C:\Users\kimathi\Desktop\devshelf\server\obj\Debug\net10.0\server.genruntimeconfig.cache
 C:\Users\kimathi\Desktop\devshelf\server\obj\Debug\net10.0\ref\server.dll
 C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kimathi\Desktop\devshelf\server\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

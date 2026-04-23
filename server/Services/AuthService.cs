@@ -9,9 +9,12 @@ public class AuthService
 {
     private readonly AppDbContext _context;
     // Constructor? (might need AppDbContext)
-    public AuthService(AppDbContext context)
+    private readonly JwtService _jwtService;
+    public AuthService(AppDbContext context, JwtService jwtService)
     {
         _context = context;
+        _jwtService = jwtService;
+
     }
 
     // Register method
@@ -48,8 +51,41 @@ public class AuthService
 
     // Login method  
     // Logic: find user + verify password + return result
+    public async Task<(bool success, string message, AuthResponseDto? response)> Login(LoginDto dto)
+    {
+        // Step 1: Find user by email
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
 
-    // Helper: hash password (use BCrypt)
-    // Helper: verify password (use BCrypt)
+
+        // Step 2: If not found, return error (don't say which field is wrong!)
+        if (user == null)
+        {
+            return (false, "Invalid email or password", null);
+        }
+        // Step 3: Verify password using BCrypt
+        if(!BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
+        {
+            // Step 4: If password wrong, return error
+            return (false, "Invalid email or password", null);
+        }
+
+        // Generate JWT token
+        string token = _jwtService.GenerateToken(user);
+
+        var response = new AuthResponseDto
+        {
+            Id = user.Id,
+            UserName = user.UserName,
+            Email = user.Email,
+            Token = token
+        };
+        // Step 5: If everything ok, return success + user
+        return (true, "Login successful", response);
+        
+        
+        
+    }
+
+    
 
 };
